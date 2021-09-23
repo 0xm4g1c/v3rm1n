@@ -20,21 +20,23 @@ Change into installation directory and use as follows
 
 ```
 ➜  python3 vermin.py -h
- __________________________________________________
-|                                                  |
+|                                                       |
 V3RM1N - Crawl Website Pages
 
 Usage:
-    docopt_parser.py [-r] [-l] [-d] <TARGET_URL>
+    vermin.py [-r] [-l] <TARGET_URL>
+    vermin.py [-d] <WORDLIST> <TARGET_URL>
+    
     
 Options:    
-    TARGET_URL       URL to attack
     -h               Show this help message and exit
     -r               List Contents of /robots.txt
     -l               List every link in a page
     -d               Bruteforce directories
+    WORDLIST         Wordlist to bruteforce directories
+    TARGET_URL       URL to attack
 
-|__________________________________________________|
+|_______________________________________________________|
 ```
 
 #### Example
@@ -60,7 +62,7 @@ Users provide a URL to attack by parsing an argument. For instance to query `/ro
 
 Target URL:  https://www.geeksforgeeks.org/
 
-Finding Robot Files 
+Finding Robot Files: 
 
  [+] User-agent: *
 Disallow: /wp-admin/
@@ -71,9 +73,9 @@ Disallow: /content-override.php
 
 __TO-DO__  
 
-- Include a `-d` option that bruteforces directories using a file that contains common directory names and outputs found directories.
+- [x] Include a `-d` option that bruteforces directories using a file that contains common directory names and outputs found directories.
   
-- Generate an output file to save found resources from commands.
+- [ ] Generate an output file to save results from commands.
 
 
 
